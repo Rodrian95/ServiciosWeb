@@ -19,12 +19,16 @@ else{
     $query2 = "INSERT INTO acceso VALUES ('$llave','$hora')";
     $result2 = $conexion->query($query2);
     $row = $result->fetch_array();
+    $query3 = "SELECT * FROM acceso WHERE llave = '$llave'";
+    $result3 = $conexion->query($query3);
+    $row1 = $result3->fetch_array();
     $status = -1;
     session_start();
     $_SESSION['loggedin'] = true;
     $_SESSION['id'] = $row['id'];
     $_SESSION['usuario'] = $row['usuario'];
     $_SESSION['start'] = time();
+    $_SESSION['llave'] = $row1['llave'];
     $_SESSION['expire'] = $_SESSION['start'] + (50 * 60);
     session_write_close();
     $status = 1;

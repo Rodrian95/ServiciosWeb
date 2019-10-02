@@ -32,8 +32,8 @@
     <div class="container">
         <div class="col-md-12-offset">
             <center>
-            BIENVENIDO <?php echo $_SESSION["usuario"]; ?> <br>
-            Tu llave es:
+            BIENVENIDO USUARIO : <?php echo $_SESSION["usuario"]; ?> <br>
+            Tu llave es: <?php echo $_SESSION["llave"]; ?>
             </center>
         </div>
     </div>

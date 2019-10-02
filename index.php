@@ -20,7 +20,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-md-offset-6 ">
+                <div class="col-md-offset-12 justify-content-center">
                     <form action="" method="post">
                         <h1><p class="text-center">Inicia Sesion</p></h1>
 
